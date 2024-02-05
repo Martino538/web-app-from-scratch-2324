@@ -1,0 +1,17 @@
+{
+    "name": "Martijn Kooijman",
+    "age": "24",
+    "geboorteadtum": "2000-02-04",
+    "job": "UX/Front-end Developer at Fresh-Dev",
+    "study": "CMD",
+    "city": "Mijdrecht",
+    "hobbies": ["DJ", "Music Producer", "Gaming"],
+    "top-5-heroes": ["", "", "", "", ""],
+    "top-5-villains": ["", "", "", "", ""],
+    "favourite-movies": ["Harry Potter", "Lord Of The Rings"],
+    "gamen": true,
+    "avatar": {
+      "url": "docs/assets/img/Profile.png",
+      "alternativeText": "Image of Martijn"
+    }
+  }
