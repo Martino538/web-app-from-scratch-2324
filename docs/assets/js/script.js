@@ -1,7 +1,6 @@
 // Vervang 'jouw_bestand.json' door het pad naar jouw JSON-bestand
 const bestandPad = "./assets/dataset/dataset-Martijn.json";
 
-
 function fetchData() {
   fetch(bestandPad)
   .then((response) => {
@@ -17,6 +16,8 @@ function fetchData() {
   .then((data) => {
     // Verwerk de JSON-data hier
     console.log(data);
+    setInterval(() => greetUser(data), 5000);
+    getAuthorInfo(data);
   })
   .catch((error) => {
     console.error(
@@ -26,6 +27,40 @@ function fetchData() {
   });
 }
 
+// Random greeting word generator
+
+function greetUser(data) {
+
+  function getRandomInt() {
+    return Math.floor(Math.random() * 3);
+  }
+
+  const randomIndex = getRandomInt();
+  const randomGreeting = data.greetings[randomIndex];
+  
+  const greetUser = document.getElementById("greeting-user");
+  greetUser.textContent = '';
+  greetUser.textContent = randomGreeting;
+}
+
+// Get and place all user data
+function getAuthorInfo(data) {
+  const authorName = document.getElementById("author-name");
+  const authorAge = document.getElementById("author-age");
+  const authorCity = document.getElementById("author-city");
+  const authorStudy = document.getElementById("author-study");
+  const authorJob = document.getElementById("author-job");
+
+  authorName.textContent = data.name;
+  authorAge.textContent = data.age;
+  authorCity.textContent = data.city;
+  authorStudy.textContent = data.study;
+  authorJob.textContent = data.job;
+}
+
+function rotateScrollButton() {
+  const scrollText = document.getElementById('scroll-text');
+}
+
 fetchData();
-
-
+getAuthorInfo();

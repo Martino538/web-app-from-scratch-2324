@@ -1,9 +1,9 @@
 {
     "name": "Martijn Kooijman",
     "age": "24",
-    "geboorteadtum": "2000-02-04",
-    "job": "UX/Front-end Developer at Fresh-Dev",
-    "study": "CMD",
+    "geboortedatum": "2000-02-04",
+    "job": "UX-Designer/Front-end Developer bij Fresh-Dev",
+    "study": "Communicatie Multimedia & Design",
     "city": "Mijdrecht",
     "hobbies": ["DJ", "Music Producer", "Gaming"],
     "top-5-heroes": ["", "", "", "", ""],
@@ -13,5 +13,6 @@
     "avatar": {
       "url": "docs/assets/img/Profile.png",
       "alternativeText": "Image of Martijn"
-    }
+    },
+    "greetings": ["Hallo!", "Goedemiddag!", "Welkom!"]
   }

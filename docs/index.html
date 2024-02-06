@@ -14,35 +14,43 @@
     <header>
       <figure>
         <a href="#intro">
-          <img src="./assets/img/logo-portfolio.png" alt="Logo of my website" />
+          <img src="./assets/img/logo.svg" alt="Logo of my website" />
         </a>
       </figure>
       <nav>
         <ul>
           <li>
-            <a href="#intro">Home</a>
+            <a href="#section-pageheader">Home</a>
           </li>
           <li>
-            <a href="">Music</a>
+            <a href="#section-dj">Music</a>
           </li>
           <li>
-            <a href="">Movies</a>
+            <a href="#section-pageheader">Movies</a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="section-intro">
+      <div id="scroll-btn">
+        <a href="#" id="scroll-text">Scroll down &#8226; Scroll down &#8226; Scroll down &#8226;</a>
+      </div>
+      <section id="section-pageheader" class="section-pageheader">
         <div class="container">
           <section>
-            <div class="intro-wrapper">
-              <h1><span>Hallo!</span> Leuk dat je er bent<span>.</span></h1>
+            <div class="pageheader-intro">
+              <h1>
+                <span id="greeting-user">Hallo!</span> Leuk dat je er bent<span>.</span>
+              </h1>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                numquam repellat placeat enim, praesentium similique mollitia
+                Mijn naam is <span id="author-name"></span>,
+                <span id="author-age"></span> jaar oud en woon in
+                <span id="author-city"></span>. Ik volg de opleiding
+                <span id="author-study"></span> in Amsterdam. Naast mijn
+                opleiding werk ik als <span id="author-job"></span>.
               </p>
               <div class="button-holder">
-                <a href="#">Lees meer!</a>
+                <a href="#section-dj">Lees meer over mij!</a>
               </div>
             </div>
             <figure>
@@ -52,7 +60,73 @@
           </section>
         </div>
       </section>
-      <section></section>
+      <section id="section-dj" class="section-dj">
+        <div class="container">
+          <section>
+            <div class="section-intro">
+              <h2>Hobbies</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellendus iure alias quas enim labore tempore ratione, aliquam
+                praesentium
+              </p>
+            </div>
+            <div class="content">
+              <div class="audio-content">
+                <div class="audio-player">
+                  <p>Demo 1:</p>
+                  <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="audio-player">
+                  <p>Demo 2:</p>
+                  <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                </div>
+                <div class="audio-player">
+                  <p>Demo 3:</p>
+                  <audio controls>
+                    <source src="horse.ogg" type="audio/ogg">
+                    <source src="horse.mp3" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                  </audio>
+                </div>
+              </div>
+              <div class="audio-image">
+                <img src="assets/img/logo-white.png" alt="">
+              </div>
+              <div class="audio-video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/uKzvo9adfQs?si=cELdOzuQ4nwx3bB7" 
+                title="YouTube video player" frameborder="0" 
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen></iframe>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section id="section-dj" class="section-dj">
+        <div class="container">
+          <section>
+            <div class="section-intro">
+              <h2>Movies</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Repellendus iure alias quas enim labore tempore ratione, aliquam
+                praesentium
+              </p>
+            </div>
+            <div class="content">
+            </div>
+          </section>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script src="./assets/js/script.js"></script>
