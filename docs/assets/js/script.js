@@ -28,9 +28,7 @@ function fetchData() {
 }
 
 // Random greeting word generator
-
 function greetUser(data) {
-
   function getRandomInt() {
     return Math.floor(Math.random() * 3);
   }
@@ -60,7 +58,11 @@ function getAuthorInfo(data) {
 
 function rotateScrollButton() {
   const scrollText = document.getElementById('scroll-text');
+  scrollText.innerHTML = scrollText.innerText.split("").map(
+    (char, i) =>
+    '<span style="transform:rotate('+ i * 8.2 +'deg)">'+ char +'</span>'
+  ).join("");
 }
 
 fetchData();
-getAuthorInfo();
+rotateScrollButton();

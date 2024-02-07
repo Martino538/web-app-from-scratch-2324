@@ -14,17 +14,7 @@ body {
 }
 
 main {
-    position: relative;
-}
-
-#scroll-btn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background-color: #ffd20c;
-    color: white;
-    padding: 50px;
-    border-radius: 50%;
+  position: relative;
 }
 
 /** START HEADER COMPONENT **/
@@ -71,6 +61,11 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
+  transition: all .3s ease-in-out;
+}
+
+header nav ul li a:hover {
+  color: #ffd20c;
 }
 
 /** END HEADER COMPONENT **/
@@ -100,13 +95,13 @@ main .section-pageheader {
   height: 60vh;
 }
 
-section .container > section {
+section .container .content {
   display: flex;
   flex-wrap: wrap;
   gap: 120px;
 }
 
-.section-pageheader .container > section .pageheader-intro {
+#section-pageheader .container .content .pageheader-intro {
   flex: 1 0 calc(100% - 640px);
   max-width: calc(100% - 640px);
   width: calc(100% - 640px);
@@ -116,22 +111,22 @@ section .container > section {
   gap: 20px;
 }
 
-.section-pageheader .container > section h1 {
+#section-pageheader .container .content h1 {
   font-size: 55px;
-  line-height: 1.1;
+  line-height: 1.2;
   margin: 50px 0 0 0;
 }
 
-.section-pageheader .container > section h1 span {
+#section-pageheader .container .content h1 span {
   color: #ffe20c;
 }
 
-.section-pageheader .container > section h1 span::after {
+#section-pageheader .container .content h1 span::after {
     content: "\A";
     white-space: pre;
 }
 
-.section-pageheader .container > section .button-holder a {
+#section-pageheader .container .content .button-holder a {
   background-color: transparent;
   border: 2px solid #ffe20c;
   text-decoration: none;
@@ -140,10 +135,10 @@ section .container > section {
   margin: 0;
   text-transform: uppercase;
   display: inline-block;
-  transition: all .3s;
+  transition: all .3s ease-in-out;
 }
 
-.section-pageheader .container > section .button-holder a:hover {
+#section-pageheader .container .content .button-holder a:hover {
     color: white;
     background-color: #ffd20c;
     cursor: pointer;
@@ -151,7 +146,7 @@ section .container > section {
 
 /** Intro image **/
 
-.section-pageheader .container > section figure {
+#section-pageheader .container .content figure {
   flex: 1 0 520px;
   max-width: 520px;
   width: 520px;
@@ -166,7 +161,7 @@ section .container > section {
     Source: https://stackoverflow.com/questions/8693733/how-to-give-outer-glow-to-an-object-in-a-transparent-png-using-css3
 **/
 
-.section-pageheader .container > section figure img {
+#section-pageheader .container .content figure img {
   height: 450px;
   position: absolute;
   top: 50%;
@@ -177,11 +172,11 @@ section .container > section {
   -webkit-transform-origin: 0 0;
 }
 
-.section-pageheader .container > section figure img:first-of-type {
+#section-pageheader .container .content figure img:first-of-type {
   z-index: 2;
 }
 
-.section-pageheader .container > section figure img:last-of-type {
+#section-pageheader .container .content figure img:last-of-type {
   z-index: 1;
   opacity: 1;
   animation: glow 1.7s ease-in-out infinite alternate;
@@ -234,8 +229,6 @@ section .container > section {
 
 /** ------ DJ COMPONENT ----- **/
 
-.section-dj
-
 .section-intro {
     margin: 0 auto;
     text-align: center;
@@ -249,11 +242,10 @@ section .container > section {
     max-width: 600px;
 }
 
-.content {
+#section-dj .container .content {
     display: flex;
     width: 100%;
     gap: 120px;
-    flex-wrap: wrap;
 }
 
 section .content .audio-content {
@@ -267,6 +259,12 @@ section .content .audio-content {
 
 section .content .audio-content p {
     margin: 0;
+}
+
+section .content .audio-content .audio-wrapper {
+  width: 300px;
+  background-color: #ffe20c;
+  display: flex;
 }
 
 section .content .audio-content .audio-player {
@@ -299,5 +297,62 @@ section .content .audio-video {
 section .content .audio-video iframe{
     width: 100%;
     height: 100%;
+}
+
+
+/** ------ MUSIC COMPONENT ------ **/
+
+#section-music .container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
+
+#section-music .container .content > section {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+}
+
+#section-music .container .content section article {
+  background-color: #ffe20c;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: black;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 0px 55px;
+}
+
+#section-music .container .content section article img {
+  width: 300px;
+}
+
+#section-music .container .content section section {
+  display: flex;
+  flex-direction: column;
+}
+
+/** END MUSIC COMPONENT
+
+/** ------ FOOTER ------ **/
+
+footer {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 90px;
+}
+
+footer section:first-of-type {
+  width: 100%;
+  height: 33vh;
+  background-color: #1b1b1b;
+}
+
+footer section:last-of-type {
+  width: 100%;
+  height: 7vh;
+  background-color: #0e0e0e;
 }
 
