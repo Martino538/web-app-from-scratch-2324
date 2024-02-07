@@ -1,7 +1,8 @@
 // Vervang 'jouw_bestand.json' door het pad naar jouw JSON-bestand
-const bestandPad = "./assets/dataset/dataset-Martijn.json";
 
 function fetchData() {
+  const bestandPad = "https://martino538.github.io/web-app-from-scratch-2324/assets/dataset/dataset-Martijn.json";
+
   fetch(bestandPad)
   .then((response) => {
     // Controleer of het ophalen succesvol was (status code 200-299)
@@ -56,13 +57,4 @@ function getAuthorInfo(data) {
   authorJob.textContent = data.job;
 }
 
-function rotateScrollButton() {
-  const scrollText = document.getElementById('scroll-text');
-  scrollText.innerHTML = scrollText.innerText.split("").map(
-    (char, i) =>
-    '<span style="transform:rotate('+ i * 8.2 +'deg)">'+ char +'</span>'
-  ).join("");
-}
-
 fetchData();
-rotateScrollButton();

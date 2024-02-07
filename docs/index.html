@@ -14,7 +14,7 @@
     <header>
       <figure>
         <a href="#intro">
-          <img src="./assets/img/logo.svg" alt="Logo of my website" />
+          <img src="./assets/img/logo-martijn.svg" alt="Logo of my website" />
         </a>
       </figure>
       <nav>
@@ -26,7 +26,7 @@
             <a href="#section-dj">Music</a>
           </li>
           <li>
-            <a href="#section-music">Movies</a>
+            <a href="#section-movies">Movies</a>
           </li>
         </ul>
       </nav>
@@ -37,7 +37,9 @@
           <div class="content">
             <div class="pageheader-intro">
               <h1>
-                <span id="greeting-user">Hallo!</span> Leuk dat je er bent<span>.</span>
+                <span id="greeting-user">Hallo!</span> Leuk dat je er bent<span
+                  >.</span
+                >
               </h1>
               <p>
                 Mijn naam is <span id="author-name"></span>,
@@ -54,7 +56,7 @@
               <img src="./assets/img/Marty.png" alt="Image of Martijn" />
               <img src="./assets/img/Marty.png" alt="Image of Martijn" />
             </figure>
-          </section>
+          </div>
         </div>
       </section>
       <section id="section-dj">
@@ -74,8 +76,11 @@
                   <p>Demo 1:</p>
                   <div class="audio-wrapper">
                     <audio controls>
-                      <source src="assets/audio/FestivalBanger2.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
+                      <source
+                        src="assets/audio/FestivalBanger2.mp3"
+                        type="audio/mpeg"
+                      />
+                      Your browser does not support the audio element.
                     </audio>
                   </div>
                 </div>
@@ -83,8 +88,11 @@
                   <p>Demo 2:</p>
                   <div class="audio-wrapper">
                     <audio controls>
-                      <source src="assets/audio/LifeInTheSky.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
+                      <source
+                        src="assets/audio/LifeInTheSky.mp3"
+                        type="audio/mpeg"
+                      />
+                      Your browser does not support the audio element.
                     </audio>
                   </div>
                 </div>
@@ -92,30 +100,38 @@
                   <p>Demo 3:</p>
                   <div class="audio-wrapper">
                     <audio controls>
-                      <source src="assets/audio/MorePassionMoreEnergy.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
+                      <source
+                        src="assets/audio/MorePassionMoreEnergy.mp3"
+                        type="audio/mpeg"
+                      />
+                      Your browser does not support the audio element.
                     </audio>
                   </div>
                 </div>
               </div>
               <div class="audio-image">
-                <img src="assets/img/logo-white.png" alt="">
+                <img src="assets/img/logo-white.png" alt="" />
               </div>
               <div class="audio-video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/uKzvo9adfQs?si=cELdOzuQ4nwx3bB7" 
-                title="YouTube video player" frameborder="0" 
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                allowfullscreen></iframe>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/uKzvo9adfQs?si=cELdOzuQ4nwx3bB7"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </section>
-      <section id="section-music">
+      <section id="section-movies">
         <div class="container">
           <div class="content">
             <div class="section-intro">
-              <h2>Movies</h2>
+              <h2>Films</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Repellendus iure alias quas enim labore tempore ratione, aliquam
@@ -123,13 +139,30 @@
               </p>
             </div>
             <section>
-              <article>
-                <img src="assets/img/LordOfTheRings.jpg" alt="Image of the movie Lord Of The Rings">
-                <p>Lord of The Rings</p>
+              <article class="movie-card">
+                <section class="movie-card-content">
+                  <figure class="movie-card-front">
+                    <img src="assets/img/LordOfTheRings.jpg" alt="Image of the movie Lord Of The Rings">
+                  </figure>
+                  <figure class="movie-card-back">
+                    <h4>John Doe</h4> 
+                    <p>Architect & Engineer</p> 
+                    <p>We love that guy</p>
+                  </figure>
+                </section>
               </article>
-              <article>
-                <img src="assets/img/harry-potter.jpg" alt="Image of the movie Harry-Potter">
-                <p>Harry Potter</p>
+
+              <article class="movie-card">
+                <section class="movie-card-content">
+                  <figure class="movie-card-front">
+                    <img src="assets/img/harry-potter.jpg" alt="Image of the movie Harry Potter">
+                    <figcaption><span>Flip me!</span></figcaption>
+                  </figure>
+                  <figure class="movie-card-back">
+                    <h4>John Doe</h4> 
+                    <p>Iedereen kent de filmserie Harry Potter wel.</p> 
+                  </figure>
+                </section>
               </article>
               
               <section>
@@ -159,14 +192,7 @@
     </main>
     <footer>
       <section>
-        <div class="container">
-
-        </div>
-      </section>
-      <section>
-        <div class="container">
-
-        </div>
+        <div class="container"></div>
       </section>
     </footer>
     <script src="./assets/js/script.js"></script>
