@@ -36,23 +36,22 @@
         <div class="container">
           <div class="content">
             <div class="pageheader-intro">
-              <h1>
+              <h1 id="pageheader-title">
                 <span id="greeting-user">Hallo!</span> Leuk dat je er bent<span>.</span>
               </h1>
-              <p>
+              <p id="pageheader-text">
                 Mijn naam is <span id="author-name"></span>,
                 <span id="author-age"></span> jaar oud en woon in
                 <span id="author-city"></span>. Ik volg de opleiding
                 <span id="author-study"></span> in Amsterdam. Naast mijn
                 opleiding werk ik als <span id="author-job"></span>.
               </p>
-              <div class="button-holder">
-                <a href="#section-dj">Lees meer over mij!</a>
+              <div class="button-holder" id="pageheader-btn">
+                <a id="animate-btn" href="#">Lees meer over mij!</a>
               </div>
             </div>
             <figure>
-              <img src="./assets/img/Marty.png" alt="Image of Martijn" />
-              <img src="./assets/img/Marty.png" alt="Image of Martijn" />
+              <img src="./assets/img/Marty.png" id="pageheader-img" alt="Image of Martijn" />
             </figure>
           </div>
         </div>
@@ -111,7 +110,7 @@
                 <img src="assets/img/logo-white.png" alt="" />
               </div>
               <div class="audio-video">
-                <iframe
+                <!-- <iframe
                   width="560"
                   height="315"
                   src="https://www.youtube.com/embed/uKzvo9adfQs?si=cELdOzuQ4nwx3bB7"
@@ -119,7 +118,7 @@
                   frameborder="0"
                   allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen
-                ></iframe>
+                ></iframe> -->
               </div>
             </div>
           </div>
@@ -143,7 +142,7 @@
                     <img src="assets/img/LordOfTheRings.jpg" alt="Image of the movie Lord Of The Rings">
                   </figure>
                   <figure class="movie-card-back">
-                    <h4>John Doe</h4> 
+                    <h4>Waarom deze film?</h4> 
                     <p>Iedereen kent de filmserie Lord Of The Rings wel.</p> 
                   </figure>
                 </section>
@@ -155,7 +154,7 @@
                     <img src="assets/img/harry-potter.jpg" alt="Image of the movie Harry Potter">
                   </figure>
                   <figure class="movie-card-back">
-                    <h4>John Doe</h4> 
+                    <h4>Waarom deze film?</h4> 
                     <p>Iedereen kent de filmserie Harry Potter wel.</p> 
                   </figure>
                 </section>
@@ -187,9 +186,6 @@
       </section>
     </main>
     <footer>
-      <section>
-        <div class="container"></div>
-      </section>
     </footer>
     <script src="./assets/js/script.js"></script>
   </body>

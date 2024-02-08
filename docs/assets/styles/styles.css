@@ -17,8 +17,9 @@ main {
   position: relative;
 }
 
-h2, h3 {
-  color: #FFD10F;
+h2,
+h3 {
+  color: #ffd10f;
 }
 
 /** START HEADER COMPONENT **/
@@ -26,8 +27,11 @@ h2, h3 {
 header {
   width: 100%;
   height: 10vh;
-  background-color: transparent;
+  background-color: black;
   display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 3;
 }
 
 header figure {
@@ -65,11 +69,11 @@ header nav ul li {
 header nav ul li a {
   color: white;
   text-decoration: none;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 header nav ul li a:hover {
-  color: #FFD10F;
+  color: #ffd10f;
 }
 
 /** END HEADER COMPONENT **/
@@ -87,22 +91,28 @@ header nav ul li a:hover {
 /** Intro text **/
 
 main > section {
-  padding: 120px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: black;
 }
 
-main .section-pageheader {
-  display: flex;
-  gap: 50px;
-  /* background-image: url("../img/wall.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%; */
-  height: 60vh;
+main > section:not(main > section:first-of-type) {
+  padding: 120px 0;
 }
 
 section .container .content {
   display: flex;
   flex-wrap: wrap;
   gap: 120px;
+}
+
+#section-pageheader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 #section-pageheader .container .content .pageheader-intro {
@@ -119,33 +129,42 @@ section .container .content {
   font-size: 55px;
   line-height: 1.2;
   margin: 50px 0 0 0;
+  position: relative;
 }
 
 #section-pageheader .container .content h1 span {
-  color: #FFD10F;
+  color: #ffd10f;
 }
 
 #section-pageheader .container .content h1 span::after {
-    content: "\A";
-    white-space: pre;
+  content: "\A";
+  white-space: pre;
+}
+
+#section-pageheader .container .content p {
+  position: relative;
+}
+
+#section-pageheader .container .content .button-holder {
+  position: relative;
 }
 
 #section-pageheader .container .content .button-holder a {
   background-color: transparent;
-  border: 2px solid #FFD10F;
+  border: 2px solid #ffd10f;
   text-decoration: none;
-  color: #FFD10F;
+  color: #ffd10f;
   padding: 10px 25px;
   margin: 0;
   text-transform: uppercase;
   display: inline-block;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 #section-pageheader .container .content .button-holder a:hover {
-    color: white;
-    background-color: #FFD10F;
-    cursor: pointer;
+  color: white;
+  background-color: #ffd10f;
+  cursor: pointer;
 }
 
 /** Intro image **/
@@ -157,9 +176,9 @@ section .container .content {
   margin: 0;
   display: flex;
   justify-content: center;
+  /* align-items: center; */
   position: relative;
 }
-
 /** 
     Glow behind image.
     Source: https://stackoverflow.com/questions/8693733/how-to-give-outer-glow-to-an-object-in-a-transparent-png-using-css3
@@ -167,45 +186,101 @@ section .container .content {
 
 #section-pageheader .container .content figure img {
   height: 450px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  transform-origin: 0 0;
-  -webkit-transform-origin: 0 0;
+  position: relative;
+  /* animation: glow 1.7s ease-in-out infinite alternate; */
 }
 
 #section-pageheader .container .content figure img:first-of-type {
   z-index: 2;
 }
 
-#section-pageheader .container .content figure img:last-of-type {
-  z-index: 1;
-  opacity: 1;
-  animation: glow 1.7s ease-in-out infinite alternate;
-}
-
 @keyframes glow {
   from {
-    z-index: 1;
-    transform: scale(1.01) translate(-50%, -50%);
-    -webkit-transform: scale(1.01) translate(-50%, -50%);
-    filter: brightness(2) blur(5px);
-    -webkit-filter: brightness(2) blur(5px);
+    filter: drop-shadow(0px 0px 4px white);
   }
+
   to {
-    z-index: 1;
-    transform: scale(1.01) translate(-50%, -50%);
-    -webkit-transform: scale(1.01) translate(-50%, -50%);
-    filter: brightness(2) blur(30px);
-    -webkit-filter: brightness(2) blur(20px);
+    filter: drop-shadow(0px 0px 20px white);
   }
 }
+
+/* .move-image { */
+.animating-header #pageheader-img {
+  animation: moveImg 1s ease-in-out normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveImg {
+  from {
+    transform: scale(1);
+    top: 0;
+    left: 0;
+  }
+  50% {
+    transform: scale(0.9);
+    top: 0;
+    left: 0;
+  }
+  to {
+    transform: scale(0);
+    top: -475px;
+    left: 350px;
+  }
+}
+
+.animating-header #pageheader-title, .animating-header #pageheader-text, .animating-header #pageheader-btn {
+  animation: moveText 1s ease-in-out normal;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes moveText {
+  from {
+    right: 0;
+  }
+  50% {
+    right: -50px;
+  }
+  to {
+    right: 1000px;
+  }
+}
+
+.animating-header #section-dj {
+  animation: moveSection 2s ease-in-out normal;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes moveSection {
+  from {
+    transform: translateY(0vh);
+  }
+  25% {
+    transform: translateY(-30vh);
+  }
+  35% {
+    transform: translateY(-20vh);
+  }
+  45% {
+    transform: translateY(-30vh);
+  }
+  55% {
+    transform: translateY(-10vh);
+  }
+
+  /* 55% {
+    transform: translateY(-20vh);
+  } */
+
+  to {
+    transform: translateY(-100vh);
+  }
+}
+
 
 @media only screen and (max-width: 425px) {
   .container {
-    /
   }
 }
 
@@ -213,13 +288,13 @@ section .container .content {
   .container {
   }
 }
-@media only screen and (min-width: 1080px) and (max-width: 1279.98px){
-    .container {
-      max-width: 980px;
-      padding-left: 20px;
-      padding-right: 20px;
-    }
+@media only screen and (min-width: 1080px) and (max-width: 1279.98px) {
+  .container {
+    max-width: 980px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
+}
 
 @media only screen and (min-width: 1440px) {
   .container {
@@ -233,76 +308,79 @@ section .container .content {
 
 /** ------ DJ COMPONENT ----- **/
 
+#section-dj {
+  margin-top: 100vh;
+}
+
 .section-intro {
-    margin: 0 auto;
-    text-align: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .section-intro h2 {
-    font-size: 45px;
+  font-size: 45px;
 }
 
 .section-intro p {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 #section-dj .container .content {
-    display: flex;
-    width: 100%;
-    gap: 120px;
+  display: flex;
+  width: 100%;
+  gap: 120px;
 }
 
 section .content .audio-content {
-    display: flex;
-    flex: 1 0 calc(100% - 640px);
-    max-width: calc(100% - 640px);
-    width: calc(100% - 640px);
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex: 1 0 calc(100% - 640px);
+  max-width: calc(100% - 640px);
+  width: calc(100% - 640px);
+  flex-direction: column;
+  gap: 30px;
 }
 
 section .content .audio-content p {
-    margin: 0;
+  margin: 0;
 }
 
 section .content .audio-content .audio-wrapper {
   width: 300px;
-  background-color: #FFD10F;
+  background-color: #ffd10f;
   display: flex;
 }
 
 section .content .audio-content .audio-player {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-section .content .audio-content audio::-webkit-media-controls-panel  {
-  background-color: #FFD10F;
+section .content .audio-content audio::-webkit-media-controls-panel {
+  background-color: #ffd10f;
 }
 
 section .content .audio-image {
-    flex: 1 0 520px;
-    max-width: 520px;
-    width: 520px;
+  flex: 1 0 520px;
+  max-width: 520px;
+  width: 520px;
 }
 
 section .content .audio-image img {
-    height: 100px;
+  height: 100px;
 }
 
 section .content .audio-video {
-    width: 100%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
 }
 
-section .content .audio-video iframe{
-    width: 100%;
-    height: 100%;
+section .content .audio-video iframe {
+  width: 100%;
+  height: 100%;
 }
-
 
 /** ------ MOVIES COMPONENT ------ **/
 
@@ -337,7 +415,8 @@ section .content .audio-video iframe{
   transform: rotateY(180deg);
 }
 
-.movie-card-front, .movie-card-back {
+.movie-card-front,
+.movie-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -355,7 +434,7 @@ section .content .audio-video iframe{
   top: 0;
   left: 0;
   position: absolute;
-  background-color: #FFD10F;
+  background-color: #ffd10f;
   /* width: 50px; */
   padding: 5px 10px;
   font-size: 10px;
@@ -367,7 +446,7 @@ section .content .audio-video iframe{
 }
 
 .movie-card-back {
-  background-color: #FFD10F;
+  background-color: #ffd10f;
   color: black;
   transform: rotateY(180deg);
   margin: 0;
@@ -396,4 +475,3 @@ footer section:last-of-type {
   height: 7vh;
   background-color: #0e0e0e;
 }
-

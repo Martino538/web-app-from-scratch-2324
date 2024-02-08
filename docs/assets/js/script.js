@@ -57,4 +57,15 @@ function getAuthorInfo(data) {
   authorJob.textContent = data.job;
 }
 
+function moveImageText() {
+  const selectedItem = document.querySelector('body');
+  selectedItem.classList.add('animating-header');
+}
+
+
+  const animateBtn = document.getElementById('animate-btn');
+  animateBtn.addEventListener("click", moveImageText);
+
+
+
 fetchData();
