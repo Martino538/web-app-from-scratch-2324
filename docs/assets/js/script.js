@@ -16,7 +16,7 @@ function fetchData() {
   })
   .then((data) => {
     // Verwerk de JSON-data hier
-    console.log(data);
+    console.log(data.avatar.url);
     setInterval(() => greetUser(data), 5000);
     getAuthorInfo(data);
   })
@@ -49,12 +49,16 @@ function getAuthorInfo(data) {
   const authorCity = document.getElementById("author-city");
   const authorStudy = document.getElementById("author-study");
   const authorJob = document.getElementById("author-job");
+  const authorImg = document.getElementById("pageheader-img");
 
+  console.log(authorImg);
+  
   authorName.textContent = data.name;
   authorAge.textContent = data.age;
   authorCity.textContent = data.city;
   authorStudy.textContent = data.study;
   authorJob.textContent = data.job;
+  authorImg.src = data.avatar.url;
 }
 
 function moveImageText() {

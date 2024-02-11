@@ -297,6 +297,10 @@ section .container .content {
 
 @media only screen and (min-width: 426px) and (max-width: 767.98px) {
 
+  .container {
+    padding-top: 95px;
+  }
+
   #section-pageheader .container .content {
     gap: 80px;
   }
@@ -310,6 +314,10 @@ section .container .content {
     gap: 30px;
   }
 
+  #section-pageheader .container .content .section-intro h1 {
+    font-size: 45px;
+  }
+
   #section-pageheader .container .content .section-intro p{
     margin: 0;
   }
@@ -320,9 +328,13 @@ section .container .content {
     width: 100%;
     justify-content: center;
   }
+  
+  #section-pageheader .container .content > figure img {
+    height: 350px;
+  }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1025px) {
+@media only screen and (min-width: 768px) and (max-width: 1439.98px) {
   #section-pageheader .container .content .section-intro {
     display: flex;
     flex: 1 0 50%;
@@ -521,7 +533,7 @@ section .container .content {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1025px) {
+@media only screen and (min-width: 768px) and (max-width: 1439.98px) {
   #section-dj .container {
     padding-top: 95px;
   }
@@ -708,7 +720,7 @@ section .container .content {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1025px) {
+@media only screen and (min-width: 768px) and (max-width: 1439.98px) {
   #section-movies .container .content > section {
     flex-wrap: wrap;
     gap: 105px;

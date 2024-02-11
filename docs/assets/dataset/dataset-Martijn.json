@@ -6,12 +6,11 @@
     "study": "Communicatie Multimedia & Design",
     "city": "Mijdrecht",
     "hobbies": ["DJ"],
-    "top-5-heroes": ["", "", "", "", ""],
-    "top-5-villains": ["Team Rocket", "", "", "", ""],
+    "top-5-heroes": ["Shrek", "Tarzan", "Bob Parr - The Incredibles", "Wall-E", "Mufasa - Lion King"],
+    "top-5-villains": ["Team Rocket", "Kapitein Haak", "Scar - Lion King", "Boze koningin - Sneeuwwitje", "Sid - Toy Story"],
     "favourite-movies": ["Harry Potter", "Lord Of The Rings"],
-    "gamen": true,
     "avatar": {
-      "url": "docs/assets/img/Profile.png",
+      "url": "./assets/img/Profile.png",
       "alternativeText": "Image of Martijn"
     },
     "greetings": ["Hallo!", "Goedemiddag!", "Welkom!"]
