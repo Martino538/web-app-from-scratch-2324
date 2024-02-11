@@ -62,7 +62,7 @@ function getAuthorInfo(data) {
   authorJob.textContent = data.job;
   authorImg.src = data.avatar.url;
 
-  data.top-5-heroes.forEach(hero => {
+  data.topHeroes.forEach(hero => {
     const li = document.createElement("li");
     li.textContent(hero);
     console.log(li, heroesList);

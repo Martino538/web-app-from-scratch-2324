@@ -6,8 +6,8 @@
     "study": "Communicatie Multimedia & Design",
     "city": "Mijdrecht",
     "hobbies": ["DJ"],
-    "top-heroes": ["Shrek", "Tarzan", "Bob Parr - The Incredibles", "Wall-E", "Mufasa - Lion King"],
-    "top-villains": ["Team Rocket", "Kapitein Haak", "Scar - Lion King", "Boze koningin - Sneeuwwitje", "Sid - Toy Story"],
+    "topHeroes": ["Shrek", "Tarzan", "Bob Parr - The Incredibles", "Wall-E", "Mufasa - Lion King"],
+    "topVillains": ["Team Rocket", "Kapitein Haak", "Scar - Lion King", "Boze koningin - Sneeuwwitje", "Sid - Toy Story"],
     "favourite-movies": ["Harry Potter", "Lord Of The Rings"],
     "avatar": {
       "url": "./assets/img/Marty.png",
