@@ -50,6 +50,8 @@ function getAuthorInfo(data) {
   const authorStudy = document.getElementById("author-study");
   const authorJob = document.getElementById("author-job");
   const authorImg = document.getElementById("pageheader-img");
+  const heroesList = document.getElementById("heroes-list");
+  const villainList = document.getElementById("villain-list");
 
   console.log(authorImg);
   
@@ -59,6 +61,13 @@ function getAuthorInfo(data) {
   authorStudy.textContent = data.study;
   authorJob.textContent = data.job;
   authorImg.src = data.avatar.url;
+
+  data.top-5-heroes.forEach(hero => {
+    const li = document.createElement("li");
+    li.textContent(hero);
+    console.log(li, heroesList);
+    heroesList.appendChild(li);
+  });
 }
 
 function moveImageText() {
