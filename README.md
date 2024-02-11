@@ -47,22 +47,57 @@ TBA
 
 [//]: # (|            | *Project* - your app is working and published on GitHub Pages. Your project is thoroughly documented in the `README.md` file in your repository.                                       |             |)
 
-<!-- Add a link to your live demo in Github Pages 🌐-->
+## What is this application about?
+Welcome to my portfolio website! Here, you'll find a glimpse into who I am as an individual. You will find a little bit about my interests and hobbies. Take a moment to explore and get to know the person behind the screen.
 
-<!-- ☝️ replace this description with a description of your own work -->
+The application is build for every device and so called full-responsive.
 
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
+## Build with
+- Git
+- Javascript
+- HTML/CSS
 
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
+## Installation Guide
 
-<!-- Maybe a table of contents here? 📚 -->
+### Step 1: Clone repository
+Clone repository by this link: https://github.com/Martino538/web-app-from-scratch-2324 with the following command:
+```bash
+-- git clone https://github.com/Martino538/web-app-from-scratch-2324
+```
 
-<!-- How about a section that describes how to install this project? 🤓 -->
+## Step 2: Developing
+
+Once you've cloned the repository, view the application on the localhost port in your desired browser
+
+## Live Demo
+
+You can see a live demo at:
+https://martino538.github.io/web-app-from-scratch-2324/
 
 <!-- ...but how does one use this project? What are its features 🤔 -->
 
-<!-- What external data source is featured in your project and what are its properties 🌠 -->
+
+# External datasource
+This project makes usage of my github repository, which contains a JSON file with data. This JSON file is the functions as an external datasource. It features personal data like:
+
+- Name
+- Age
+- Date of Birth
+- Job
+- Study
+- City
+- Hobbies
+
+And much more about me!
 
 <!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
-<!-- How about a license here? 📜 (or is it a licence?) 🤷 -->
+# Checklist
+Goals for my application I already finished and would love to finish in the future
+(Checked means finished, unchecked means: Will be added in the future)
+
+- [x] Professional layout
+- [x] Micro interaction by animating text out of the screen.
+- [x] Making the website fully responsive.
+- [ ] Make sections animate like a slideshow into your view instead of scrolling down the page.
+
