@@ -160,7 +160,6 @@ section .container .content {
   width: 520px;
   margin: 0;
   display: flex;
-  /* align-items: center; */
   position: relative;
 }
 /** 
@@ -176,6 +175,8 @@ section .container .content {
   animation-play-state: running;
   animation-fill-mode: forwards;
 }
+
+/** Pageheader animations **/
 
 @keyframes glow {
   from {
@@ -252,15 +253,12 @@ section .container .content {
     transform: translateY(-10vh);
   }
 
-  /* 55% {
-    transform: translateY(-20vh);
-  } */
-
   to {
     transform: translateY(-100vh);
   }
 }
 
+/** Media queries pageheader **/
 
 @media only screen and (max-width: 425px) {
   .container {
@@ -297,11 +295,60 @@ section .container .content {
   
 }
 
-@media only screen and (max-width: 768px) {
-  .container {
+@media only screen and (min-width: 426px) and (max-width: 767.98px) {
+
+  #section-pageheader .container .content {
+    gap: 80px;
+  }
+
+  #section-pageheader .container .content .section-intro {
+    flex: 1 0 100%;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #section-pageheader .container .content .section-intro p{
+    margin: 0;
+  }
+
+  #section-pageheader .container .content figure {
+    flex: 1 0 100%;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
   }
 }
-@media only screen and (min-width: 1080px) and (max-width: 1279.98px) {
+
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  #section-pageheader .container .content .section-intro {
+    display: flex;
+    flex: 1 0 50%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #section-pageheader .container .content .section-intro h1{
+    font-size: 45px;
+  }
+  
+  #section-pageheader .container .content .section-intro p{
+    margin: 0;
+  }
+
+  #section-pageheader .container .content > figure {
+    flex: 1 0 50%;
+    justify-content: center;
+  }
+
+  #section-pageheader .container .content > figure img {
+    height: 350px;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
   .container {
     max-width: 980px;
     padding-left: 20px;
@@ -351,10 +398,6 @@ section .container .content {
   margin-top: 100vh;
 }
 
-.section-intro {
-  /* text-align: center; */
-}
-
 .section-intro h2 {
   font-size: 45px;
 }
@@ -369,37 +412,37 @@ section .container .content {
   gap: 30px;
 }
 
-section .content .audio-content p {
+#section-dj .content .audio-content p {
   margin: 0;
 }
 
-section .content .audio-content .audio-wrapper {
+#section-dj .content .audio-content .audio-wrapper {
   background-color: #ffd10f;
   display: flex;
 }
 
-section .content .audio-content .audio-player {
+#section-dj .content .audio-content .audio-player {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-section .content .audio-content audio::-webkit-media-controls-panel {
+#section-dj .content .audio-content audio::-webkit-media-controls-panel {
   background-color: #ffd10f;
 }
 
-section .content .audio-image img {
+#section-dj .content .audio-image img {
   height: 100px;
 }
 
-section .content .audio-video {
+#section-dj .content .audio-video {
   width: 100%;
   height: 600px;
   display: flex;
   justify-content: center;
 }
 
-section .content .audio-video iframe {
+#section-dj .content .audio-video iframe {
   width: 100%;
   height: 100%;
 }
@@ -436,11 +479,89 @@ section .content .audio-video iframe {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 426px) and (max-width: 767.98px) {
+  #section-dj .container .content {
+    gap: 30px;
+  }
 
+  #section-dj .container .content .section-intro {
+    flex: 1 0 100%;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #section-dj .container .content .section-intro p{
+    margin: 0;
+  }
+
+  #section-dj .container .content > section {
+    flex: 1 0 100%;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #section-dj .container .content > section .audio-content {
+    flex: 1 0 calc(50% - 30px);
+  }
+
+  #section-dj .container .content > section .audio-content audio {
+    width: 100%;
+  }
+
+  #section-dj .container .content > section .audio-image {
+    flex: 1 0 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-@media only screen and (min-width: 1080px) and (max-width: 1279.98px) {
 
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  #section-dj .container {
+    padding-top: 95px;
+  }
+  
+  #section-dj .container .content {
+    gap: 30px;
+  }
+
+  #section-dj .container .content .section-intro {
+    display: flex;
+    flex: 1 0 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  #section-dj .container .content .section-intro p{
+    margin: 0;
+  }
+
+  #section-dj .container .content > section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    flex: 1 0 100%;
+  }
+
+  #section-dj .container .content > section .audio-content {
+    flex: 1 0 calc(50% - 15px);
+  }
+
+  #section-dj .container .content > section .audio-content audio {
+    width: 100%;
+  }
+
+  #section-dj .container .content > section .audio-image {
+    flex: 1 0 calc(50% - 15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -581,11 +702,17 @@ section .content .audio-video iframe {
   }
 }
 
-@media only screen and (max-width: 768px) {
-
+@media only screen and (min-width: 426px) and (max-width: 767.98px) {
+  #section-movies .container .content > section {
+    flex-wrap: wrap;
+  }
 }
-@media only screen and (min-width: 1080px) and (max-width: 1279.98px) {
 
+@media only screen and (min-width: 768px) and (max-width: 1025px) {
+  #section-movies .container .content > section {
+    flex-wrap: wrap;
+    gap: 105px;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
