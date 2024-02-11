@@ -16,7 +16,6 @@ function fetchData() {
   })
   .then((data) => {
     // Verwerk de JSON-data hier
-    console.log(data.avatar.url);
     setInterval(() => greetUser(data), 5000);
     getAuthorInfo(data);
   })
@@ -52,8 +51,6 @@ function getAuthorInfo(data) {
   const authorImg = document.getElementById("pageheader-img");
   const heroesList = document.getElementById("heroes-list");
   const villainList = document.getElementById("villain-list");
-
-  console.log(authorImg);
   
   authorName.textContent = data.name;
   authorAge.textContent = data.age;
@@ -62,11 +59,17 @@ function getAuthorInfo(data) {
   authorJob.textContent = data.job;
   authorImg.src = data.avatar.url;
 
+
   data.topHeroes.forEach(hero => {
     const li = document.createElement("li");
-    li.textContent(hero);
-    console.log(li, heroesList);
+    li.textContent = hero;
     heroesList.appendChild(li);
+  });
+
+  data.topVillains.forEach(villain => {
+    const li = document.createElement("li");
+    li.textContent = villain;
+    villainList.appendChild(li);
   });
 }
 

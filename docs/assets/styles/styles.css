@@ -723,7 +723,15 @@ section .container .content {
 @media only screen and (min-width: 768px) and (max-width: 1439.98px) {
   #section-movies .container .content > section {
     flex-wrap: wrap;
-    gap: 105px;
+    gap: 75px;
+  }
+
+  #section-movies .container .content > section > section:first-of-type {
+    flex: 1 0 calc(50% - 75px);
+  }
+
+  #section-movies .container .content > section > section:last-of-type {
+    flex: 1 0 50%;
   }
 }
 
