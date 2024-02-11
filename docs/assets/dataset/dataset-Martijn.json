@@ -10,7 +10,7 @@
     "top-5-villains": ["Team Rocket", "Kapitein Haak", "Scar - Lion King", "Boze koningin - Sneeuwwitje", "Sid - Toy Story"],
     "favourite-movies": ["Harry Potter", "Lord Of The Rings"],
     "avatar": {
-      "url": "./assets/img/Profile.png",
+      "url": "./assets/img/Marty.png",
       "alternativeText": "Image of Martijn"
     },
     "greetings": ["Hallo!", "Goedemiddag!", "Welkom!"]
