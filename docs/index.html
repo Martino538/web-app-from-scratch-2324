@@ -12,24 +12,31 @@
   </head>
   <body>
     <header>
-      <figure>
-        <a href="#intro">
-          <img src="./assets/img/logo-martijn.svg" alt="Logo of my website" />
-        </a>
-      </figure>
-      <nav>
-        <ul>
-          <li>
-            <a href="#section-pageheader">Home</a>
-          </li>
-          <li>
-            <a href="#section-dj">Music</a>
-          </li>
-          <li>
-            <a href="#section-movies">Movies</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="container">
+        <figure>
+          <a href="#intro">
+            <img src="./assets/img/logo-martijn.svg" alt="Logo of my website" />
+          </a>
+        </figure>
+        <nav>
+          <ul id="nav-menu">
+            <li>
+              <a href="#section-pageheader">Home</a>
+            </li>
+            <li>
+              <a href="#section-dj">Music</a>
+            </li>
+            <li>
+              <a href="#section-movies">Movies</a>
+            </li>
+          </ul>
+          <section id="hamburger-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </section>
+        </nav>
+      </div>
     </header>
     <main>
       <section id="section-pageheader">
@@ -37,7 +44,9 @@
           <div class="content">
             <div class="section-intro">
               <h1 id="pageheader-title">
-                <span id="greeting-user">Hallo!</span> Leuk dat je er bent<span>.</span>
+                <span id="greeting-user">Hallo!</span> Leuk dat je er bent<span
+                  >.</span
+                >
               </h1>
               <p id="pageheader-text">
                 Mijn naam is <span id="author-name"></span>,
@@ -139,11 +148,14 @@
               <article class="movie-card">
                 <section class="movie-card-content">
                   <figure class="movie-card-front">
-                    <img src="assets/img/LordOfTheRings.jpg" alt="Image of the movie Lord Of The Rings">
+                    <img
+                      src="assets/img/LordOfTheRings.jpg"
+                      alt="Image of the movie Lord Of The Rings"
+                    />
                   </figure>
                   <figure class="movie-card-back">
-                    <h4>Waarom deze film?</h4> 
-                    <p>Iedereen kent de filmserie Lord Of The Rings wel.</p> 
+                    <h4>Waarom deze film?</h4>
+                    <p>Iedereen kent de filmserie Lord Of The Rings wel.</p>
                   </figure>
                 </section>
               </article>
@@ -151,33 +163,31 @@
               <article class="movie-card">
                 <section class="movie-card-content">
                   <figure class="movie-card-front">
-                    <img src="assets/img/harry-potter.jpg" alt="Image of the movie Harry Potter">
+                    <img
+                      src="assets/img/harry-potter.jpg"
+                      alt="Image of the movie Harry Potter"
+                    />
                   </figure>
                   <figure class="movie-card-back">
-                    <h4>Waarom deze film?</h4> 
-                    <p>Iedereen kent de filmserie Harry Potter wel.</p> 
+                    <h4>Waarom deze film?</h4>
+                    <p>Iedereen kent de filmserie Harry Potter wel.</p>
                   </figure>
                 </section>
               </article>
-              
+
               <section>
                 <h3>Top 5 helden:</h3>
-                <ol id="heroes-list">
-
-                </ol>
+                <ol id="heroes-list"></ol>
               </section>
               <section>
                 <h3>Top 5 slechterikken:</h3>
-                <ol id="villain-list">
-                </ol>
+                <ol id="villain-list"></ol>
               </section>
             </section>
           </div>
         </div>
       </section>
     </main>
-    <footer>
-    </footer>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
