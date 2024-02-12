@@ -82,16 +82,52 @@ function hamburgerMenu() {
   const hamburgerMenu = document.getElementById("hamburger-menu");
   const navMenu = document.getElementById("nav-menu");
 
-  console.log(hamburgerMenu);
-
   hamburgerMenu.addEventListener("click", () => {
     hamburgerMenu.classList.toggle("active");
     navMenu.classList.toggle("active");
   });
+
+  document.querySelectorAll(".nav-item").forEach((item) => item.
+  addEventListener("click", () => {
+    hamburgerMenu.classList.remove("active");
+    navMenu.classList.remove("active");
+  }));
 }
 
-const animateBtn = document.getElementById("animate-btn");
-animateBtn.addEventListener("click", moveImageText);
+function toggleSectionActive() {
+  const clickedNavItem = this;
+
+  navItems.forEach((item) => {
+    item.classList.remove("active-nav");
+  });
+
+  clickedNavItem.classList.add("active-nav");
+
+  // setTimeout(() => {
+  //   clickedNavItem.classList.add("active-nav");
+  // }, 3000);
+
+  const sectionId = clickedNavItem.dataset.sectionId;
+  const section = document.getElementById(sectionId);
+  if (section) {
+    // Verwijder eerst de 'active' klasse van alle secties
+    document.querySelectorAll(".section").forEach((section) => {
+      section.classList.remove("active-section");
+    });
+    // Voeg de 'active' klasse toe aan de bijbehorende sectie
+    section.classList.add("active-section");
+
+    // setTimeout(() => {
+    //   section.classList.add("active-section");
+    // }, 3000);
+
+  }
+}
+
+const navItems = document.querySelectorAll(".nav-item");
+navItems.forEach((item) => {
+  item.addEventListener("click", toggleSectionActive);
+});
 
 fetchData();
 hamburgerMenu();

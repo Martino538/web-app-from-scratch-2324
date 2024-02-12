@@ -23,16 +23,19 @@ h3 {
   margin: 0;
 }
 
-/** START HEADER COMPONENT **/
+/** START HEADER COMPONENT 
 
+Hamburger menu source: https://www.youtube.com/watch?v=flItyHiDm7E&ab_channel=WebDevTutorials
+
+**/
 header {
   width: 100%;
   height: 10vh;
-  background-color: transparent;
+  background-color: black;
   display: flex;
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 6;
 }
 
 header figure {
@@ -61,7 +64,6 @@ header nav ul {
   padding: 0;
 }
 
-
 header nav ul li {
   list-style-type: none;
 }
@@ -73,6 +75,10 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
+  color: #ffd10f;
+}
+
+.active-nav {
   color: #ffd10f;
 }
 
@@ -138,7 +144,7 @@ header nav ul li a:hover {
 
   #hamburger-menu.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
-  } 
+  }
 
   #nav-menu {
     position: fixed;
@@ -148,14 +154,18 @@ header nav ul li a:hover {
     background-color: #ffd10f;
     width: 100%;
     text-align: center;
-    transition: .3s;
+    transition: 0.3s;
   }
 
   #nav-menu li {
     margin: 16px 0;
   }
 
-  #nav-menu li a:hover{
+  #nav-menu li a:hover {
+    color: black;
+  }
+
+  .active-nav {
     color: black;
   }
 
@@ -165,7 +175,7 @@ header nav ul li a:hover {
 }
 
 @media only screen and (min-width: 768px) {
-  header .container { 
+  header .container {
     margin: 0 auto;
     width: 100%;
     flex: 1 0 100%;
@@ -196,7 +206,7 @@ header nav ul li a:hover {
 
 main > section {
   min-height: 100vh;
-  display: flex;
+  display: none;
   align-items: center;
   position: relative;
   background-color: black;
@@ -208,10 +218,11 @@ section .container .content {
 }
 
 #section-pageheader {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  display: flex;
 }
 
 #section-pageheader .container .content h1 {
@@ -266,10 +277,8 @@ section .container .content {
   display: flex;
   position: relative;
 }
-/** 
-    Glow behind image.
-    Source: https://stackoverflow.com/questions/8693733/how-to-give-outer-glow-to-an-object-in-a-transparent-png-using-css3
-**/
+
+
 
 #section-pageheader .container .content figure img {
   height: 450px;
@@ -334,6 +343,12 @@ section .container .content {
   to {
     right: 1000px;
   }
+}
+
+main > section.active-section {
+  display: flex;
+  z-index: 4;
+  /* animation: moveSection 2s ease-in-out normal; */
 }
 
 .animating-header #section-dj {
@@ -518,7 +533,11 @@ section .container .content {
 /** ------ DJ COMPONENT ----- **/
 
 #section-dj {
-  margin-top: 100vh;
+  /* margin-top: 100vh; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 #section-movies .container {
@@ -759,6 +778,13 @@ section .container .content {
 
 /** ------ MOVIES COMPONENT ------ **/
 
+#section-movies {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 #section-movies .container .content {
   display: flex;
   flex-direction: column;
@@ -768,7 +794,7 @@ section .container .content {
 #section-movies .container .content > section {
   display: flex;
   justify-content: center;
-  gap: 75px;
+  gap: 175px;
   flex-wrap: wrap;
 }
 
@@ -879,4 +905,4 @@ section .container .content {
   }
 }
 
-/** END MOVIES COMPONENT
+/** END MOVIES COMPONENT **/
