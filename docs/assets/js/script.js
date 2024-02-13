@@ -2,7 +2,8 @@
 
 function fetchData() {
   const bestandPad =
-    "https://martino538.github.io/web-app-from-scratch-2324/assets/dataset/dataset-Martijn.json";
+  "./info.json";
+    // "https://martino538.github.io/web-app-from-scratch-2324/assets/dataset/dataset-Martijn.json";
 
   fetch(bestandPad)
     .then((response) => {
@@ -54,14 +55,16 @@ function getAuthorInfo(data) {
 
   authorFirstName.textContent = data.firstName;
   authorLastName.textContent = data.lastName;
-  authorTruthsAndLies.textContent = data.truthsAndLies;
   authorAge.textContent = data.age;
   authorCity.textContent = data.city;
   authorStudy.textContent = data.study;
   authorJob.textContent = data.job;
   authorImg.src = data.avatar_url;
+  const truthsAndLies = data.authorTruthsAndLies;
 
-  data.authorTruthsAndLiesList.forEach((listItem) => {
+  console.log(data.truthsAndLies);
+
+  data.truthsAndLies.forEach((listItem) => {
     const list = document.createElement("ul");
     authorTruthsAndLiesList.appendChild(list);
 
