@@ -1,4 +1,4 @@
-// Vervang 'jouw_bestand.json' door het pad naar jouw JSON-bestand
+// Fetch the user data from API
 
 function fetchData() {
   const bestandPad =
@@ -6,17 +6,14 @@ function fetchData() {
 
   fetch(bestandPad)
     .then((response) => {
-      // Controleer of het ophalen succesvol was (status code 200-299)
       if (!response.ok) {
         throw new Error(
           `Fout bij het ophalen van het bestand: ${response.status}`
         );
       }
-      // Converteer de response naar JSON
       return response.json();
     })
     .then((data) => {
-      // Verwerk de JSON-data hier
       setInterval(() => greetUser(data), 5000);
       getAuthorInfo(data);
     })
@@ -44,7 +41,9 @@ function greetUser(data) {
 
 // Get and place all user data
 function getAuthorInfo(data) {
-  const authorName = document.getElementById("author-name");
+  const authorFirstName = document.getElementById("author-firstName");
+  const authorLastName = document.getElementById("author-lastName");
+  const authorTruthsAndLiesList = document.getElementById("author-truthsAndLies");
   const authorAge = document.getElementById("author-age");
   const authorCity = document.getElementById("author-city");
   const authorStudy = document.getElementById("author-study");
@@ -53,12 +52,23 @@ function getAuthorInfo(data) {
   const heroesList = document.getElementById("heroes-list");
   const villainList = document.getElementById("villain-list");
 
-  authorName.textContent = data.name;
+  authorFirstName.textContent = data.firstName;
+  authorLastName.textContent = data.lastName;
+  authorTruthsAndLies.textContent = data.truthsAndLies;
   authorAge.textContent = data.age;
   authorCity.textContent = data.city;
   authorStudy.textContent = data.study;
   authorJob.textContent = data.job;
-  authorImg.src = data.avatar.url;
+  authorImg.src = data.avatar_url;
+
+  data.authorTruthsAndLiesList.forEach((listItem) => {
+    const list = document.createElement("ul");
+    authorTruthsAndLiesList.appendChild(list);
+
+    const li = document.createElement("li");
+    li.textContent = listItem;
+    list.appendChild(li);
+  });
 
   data.topHeroes.forEach((hero) => {
     const li = document.createElement("li");
@@ -73,11 +83,13 @@ function getAuthorInfo(data) {
   });
 }
 
+// Move text out of screen animation
 function moveImageText() {
   const selectedItem = document.querySelector("body");
   selectedItem.classList.add("animating-header");
 }
 
+// Show hamburger menu on small screens
 function hamburgerMenu() {
   const hamburgerMenu = document.getElementById("hamburger-menu");
   const navMenu = document.getElementById("nav-menu");
@@ -94,6 +106,7 @@ function hamburgerMenu() {
   }));
 }
 
+// Set right section on navbar click
 function toggleSectionActive() {
   const clickedNavItem = this;
 
@@ -110,11 +123,9 @@ function toggleSectionActive() {
   const sectionId = clickedNavItem.dataset.sectionId;
   const section = document.getElementById(sectionId);
   if (section) {
-    // Verwijder eerst de 'active' klasse van alle secties
     document.querySelectorAll(".section").forEach((section) => {
       section.classList.remove("active-section");
     });
-    // Voeg de 'active' klasse toe aan de bijbehorende sectie
     section.classList.add("active-section");
 
     // setTimeout(() => {
@@ -123,6 +134,8 @@ function toggleSectionActive() {
 
   }
 }
+
+
 
 const navItems = document.querySelectorAll(".nav-item");
 navItems.forEach((item) => {

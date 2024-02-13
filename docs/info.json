@@ -1,0 +1,18 @@
+{
+  "firstName": "Martijn",
+  "lastName": "Kooijman",
+  "avatar_url": "./assets/img/Marty.png",
+  "age": 24,
+  "city": "Mijdrecht",
+  "hobbies": ["DJ", "Music Producer"],
+  "truthsAndLies" : ["Een van mijn familieleden is een BN'er", "Ik heb voor deze opleiding MBO gedaan", "Ik mag deze zomer als dj draaien op een groot festival"],
+  "bio" : "optioneel",
+  "favouriteAnimal" : "Kat",
+  "geboortedatum": "2000-02-04",
+  "study": "Communicatie Multimedia & Design",
+  "job": "UX-Designer/Front-end Developer bij Fresh-Dev",
+  "topHeroes": ["Shrek", "Tarzan", "Bob Parr - The Incredibles", "Wall-E", "Mufasa - Lion King"],
+  "topVillains": ["Team Rocket", "Kapitein Haak", "Scar - Lion King", "Boze koningin - Sneeuwwitje", "Sid - Toy Story"],
+  "favourite-movies": ["Harry Potter", "Lord Of The Rings"],
+  "greetings": ["Hallo!", "Goedemiddag!", "Welkom!"]
+}
