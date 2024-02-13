@@ -225,6 +225,12 @@ section .container .content {
   display: flex;
 }
 
+#section-pageheader .container .content .section-intro{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 #section-pageheader .container .content h1 {
   font-size: 55px;
   line-height: 1.2;
@@ -281,6 +287,8 @@ section .container .content {
   margin: 0;
   display: flex;
   position: relative;
+  align-items: center;
+  justify-content: center;
 }
 
 #section-pageheader .container .content figure img {
@@ -461,18 +469,30 @@ main > section.active-section {
   .container {
     max-width: 980px;
   }
-  #section-pageheader .section-intro {
-    flex: 1 0 50%;
-    max-width: 50%;
-    width: 50%;
+
+  #section-pageheader .container {
+    max-width: 980px;
+    padding: 110px 20px;
+  }
+
+  #section-pageheader .container .content {
+    gap: 60px;
+  }
+
+  #section-pageheader .container .content .section-intro {
+    flex: 1 0 100%;
+    max-width: 100%;
+    width: 100%;
     gap: 30px;
     display: flex;
     flex-direction: column;
   }
+
+
   #section-pageheader .container .content figure {
-    flex: 1 0 50%;
-    max-width: 50%;
-    width: 50%;
+    flex: 1 0 100%;
+    max-width: 100%;
+    width: 100%;
     justify-content: center;
     align-items: center;
   }
