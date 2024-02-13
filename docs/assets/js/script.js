@@ -1,9 +1,7 @@
 // Fetch the user data from API
 
 function fetchData() {
-  const bestandPad =
-  "./info.json";
-    // "https://martino538.github.io/web-app-from-scratch-2324/assets/dataset/dataset-Martijn.json";
+  const bestandPad = "https://martino538.github.io/web-app-from-scratch-2324/info.json";
 
   fetch(bestandPad)
     .then((response) => {
