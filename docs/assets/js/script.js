@@ -117,7 +117,6 @@ function toggleSectionActive() {
 
   clickedNavItem.classList.add("active-nav");
 
-
   // Lees het unieke attribuut sectionId 
   const sectionId = clickedNavItem.dataset.sectionId;
   const section = document.getElementById(sectionId);
@@ -125,18 +124,27 @@ function toggleSectionActive() {
     document.querySelectorAll(".section").forEach((section) => {
       section.classList.remove("active-section");
     });
-    section.classList.add("active-section");
+
+    if (clickedNavItem.id === "animate-btn") {
+      setTimeout(() => {
+        section.classList.add("active-section");
+        console.log(clickedNavItem.id);
+      }, 1800);
+    } else {
+      section.classList.add("active-section");
+    }
   }
 }
 
 const animateBtn = document.getElementById('animate-btn');
-animateBtn.addEventListener("click", moveImageText);
 
-
+// Zorg dat er voor elke nav item een click functie op zit
 const navItems = document.querySelectorAll(".nav-item");
 navItems.forEach((item) => {
   item.addEventListener("click", toggleSectionActive);
 });
+
+animateBtn.addEventListener("click", moveImageText);
 
 fetchData();
 hamburgerMenu();

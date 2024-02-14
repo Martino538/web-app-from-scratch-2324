@@ -313,9 +313,8 @@ section .container .content {
 }
 
 /* .move-image { */
-.animating-header #pageheader-img {
-  animation: moveImg 1s ease-in-out normal;
-  /* animation-fill-mode: forwards; */
+.animating-header #pageheader-img-wrapper {
+  animation: moveImg 3.1s ease-in-out normal;
 }
 
 @keyframes moveImg {
@@ -324,35 +323,43 @@ section .container .content {
     top: 0;
     left: 0;
   }
-  50% {
+  15% {
     transform: scale(0.9);
     top: 0;
     left: 0;
   }
-  to {
+  50% {
     transform: scale(0);
     top: -475px;
     left: 350px;
+  }
+  to {
+    transform: scale(1);
+    top: 0;
+    left: 0;
   }
 }
 
 .animating-header #pageheader-title,
 .animating-header #pageheader-text,
 .animating-header #pageheader-btn {
-  animation: moveText 1s ease-in-out normal;
+  animation: moveText 3.7s ease-in-out normal;
   animation-fill-mode: forwards;
-  animation-delay: 0.4s;
 }
 
 @keyframes moveText {
   from {
     right: 0;
   }
-  50% {
+  10% {
     right: -50px;
   }
-  to {
+
+  40% {
     right: 1000px;
+  }
+  to {
+    right: 0;
   }
 }
 
