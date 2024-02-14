@@ -1,5 +1,5 @@
 ## Mijn proces?
-Welkom op mijn proces pagina. Hier beschrijf ik wat ik per dag gedaan heb en hoe ik tot het eindresultaat ben gekomen. Ik beschrijf wat ik geleerd heb en waar ik moeite mee heb.
+Welkom op mijn proces pagina. Hier beschrijf ik wat ik per dag gedaan heb en hoe ik tot het eindresultaat ben gekomen. Ik beschrijf wat ik geleerd heb, maar ook waar ik moeite mee heb gehad.
 
 ## Dag 1
 #### 05-02-2024
