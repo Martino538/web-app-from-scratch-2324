@@ -71,4 +71,6 @@ https://stackoverflow.com/questions/8693733/how-to-give-outer-glow-to-an-object-
 #### 14-02-2024
 Vandaag heb ik mij gericht op de afronding van de website. Wat ik in eerste instantie graag had willen doen was het toevoegen van een animatie tussen de secties. Deze luid als volgt: Als er gewisseld wordt tussen een sectie, laat dan eerste de content uit het scherm bewegen voordat en daadwerkelijk een nieuwe sectie in beeld wordt gebracht.
 
-Deze animatie is mij helaas niet gelukt door te voeren voor alles secties. Wel heb ik een soortgelijke animatie weten te maken op de homepagina op de knop 
+Deze animatie is mij helaas niet gelukt door te voeren voor alles secties. Wel heb ik een soortgelijke animatie weten te maken op de homepagina op de knop 'Lees meer over mij'. Zodra er op deze knop wordt gedrukt gebeurd precies de animatie zoals hierboven beschreven. Dit wordt gedaan d.m.v. van de volgende code:
+
+
