@@ -25,8 +25,6 @@ Once you've cloned the repository, view the application on the localhost port in
 You can see a live demo at:
 https://martino538.github.io/web-app-from-scratch-2324/
 
-<!-- ...but how does one use this project? What are its features 🤔 -->
-
 
 # External datasource
 This project makes usage of my github repository, which contains a JSON file with data. This JSON file is the functions as an external datasource. It features personal data like:
@@ -41,7 +39,6 @@ This project makes usage of my github repository, which contains a JSON file wit
 
 And much more about me!
 
-<!-- Maybe a checklist of done stuff and stuff still on your wishlist? ✅ -->
 
 # Checklist
 Goals for my application I already finished and would love to finish in the future
