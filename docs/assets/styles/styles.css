@@ -363,7 +363,7 @@ main > section.active-section {
 }
 
 .animating-header #section-dj {
-  animation: moveSection 2s ease-in-out normal;
+  /* animation: moveSection 2s ease-in-out normal; */
   animation-fill-mode: forwards;
   animation-delay: 0.2s;
 }

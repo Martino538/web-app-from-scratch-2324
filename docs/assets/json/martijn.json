@@ -1,0 +1,17 @@
+{
+    "name": "Martijn Kooijman",
+    "age": "24",
+    "job": "UX-Designer/Front-end Developer bij Fresh-Dev",
+    "study": "Communicatie Multimedia & Design",
+    "city": "Mijdrecht",
+    "hobbies": ["Dj", "Music Producer"],
+    "favouriteMovies": ["Harry Potter", "Lord of The Rings"],
+    "superheroes": ["Shrek", "Tarzan", "Bob Parr - The Incredibles", "Wall-E", "Mufasa - Lion King"],
+    "supervillains": ["Team Rocket", "Kapitein Haak", "Scar - Lion King", "Boze koningin - Sneeuwwitje", "Sid - Toy Story"],
+    "gamen": true,
+    "avatar": {
+      "url": "./assets/img/Marty.png",
+      "alternativeText": "Picture of Martijn"
+    },
+    "greetings": ["Hallo!", "Goedemiddag!", "Welkom!"]
+  }

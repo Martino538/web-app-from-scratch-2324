@@ -117,10 +117,8 @@ function toggleSectionActive() {
 
   clickedNavItem.classList.add("active-nav");
 
-  // setTimeout(() => {
-  //   clickedNavItem.classList.add("active-nav");
-  // }, 3000);
 
+  // Lees het unieke attribuut sectionId 
   const sectionId = clickedNavItem.dataset.sectionId;
   const section = document.getElementById(sectionId);
   if (section) {
@@ -128,14 +126,11 @@ function toggleSectionActive() {
       section.classList.remove("active-section");
     });
     section.classList.add("active-section");
-
-    // setTimeout(() => {
-    //   section.classList.add("active-section");
-    // }, 3000);
-
   }
 }
 
+const animateBtn = document.getElementById('animate-btn');
+animateBtn.addEventListener("click", moveImageText);
 
 
 const navItems = document.querySelectorAll(".nav-item");
