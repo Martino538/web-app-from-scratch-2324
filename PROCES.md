@@ -22,7 +22,9 @@ Zo is de data gefetcht:<br>
 <p>Bron voor de glow animatie: <p>
 https://stackoverflow.com/questions/8693733/how-to-give-outer-glow-to-an-object-in-a-transparent-png-using-css3
 
-<p>Hiernaast ben ik erachter gekomen wat de essentie van een breakdown-schets is. Ik heb soms moeite om semantische code te schrijven, waardoor een schets op voorhand erg handig kan zijn. In het begin had ik al een breakdown schets, maar deze was niet erg uitgebreid. Deze heb ik vandaag verbeterd en is hieronder te zien:<p>
+<p>Hiernaast ben ik erachter gekomen wat de essentie van een breakdown-schets is. Ik heb soms moeite om semantische code te schrijven, waardoor een schets op voorhand erg handig kan zijn. In het begin had ik al een breakdown schets, maar deze was niet erg uitgebreid. Deze heb ik vandaag verbeterd en is hieronder te zien:<p><br>
+
+<img width="525" alt="Scherm­afbeelding 2024-02-14 om 23 00 49" src="https://github.com/Martino538/web-app-from-scratch-2324/assets/32341318/ab401c16-7f92-44a1-a9d7-535dc3d07e3b">
 
 
 ## Dag 3
